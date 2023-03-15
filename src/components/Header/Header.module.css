@@ -1,0 +1,32 @@
+.headerArea {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: #121317;
+}
+
+.menuMobile {
+    display: none;
+}
+
+.logo {
+    margin-left: 36px;
+    margin-right: 30px;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.linkItem {
+    color: #FFF;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 16px 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+}

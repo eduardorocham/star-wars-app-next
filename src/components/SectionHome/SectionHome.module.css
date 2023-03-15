@@ -1,0 +1,75 @@
+.sectionArea {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.opacity {
+    height: inherit;
+    background-color: #121317;
+    opacity: 0.8;
+}
+
+.container {
+    max-width: 90rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-top: 12rem;
+}
+
+.info {
+    max-width: 50rem;
+}
+
+.infoTitle {
+    font-size: 6rem;
+    color: #FFF;
+}
+
+.infoBar {
+    display: none;
+    width: 5.2rem;
+    height: 0.2rem;
+    background-color: #f2d027;
+}
+
+.infoDesc {
+    color: #DFCC1D;
+    padding-top: 2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media (max-width:414px) {
+    .sectionMovies, .sectionCharacteres, .sectionVeiculos {
+        height: 31.3rem;
+        margin: 1rem;
+    }
+
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .info {
+        max-width: 20rem;
+    }
+
+    .infoTitle {
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+
+    .infoBar {
+        display: block;
+        margin-top: 0.5rem;
+    }
+
+    .infoDesc {
+        display: none;
+    }
+}
