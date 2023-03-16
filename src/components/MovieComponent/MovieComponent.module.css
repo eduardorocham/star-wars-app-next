@@ -1,0 +1,76 @@
+.film {
+    width: 195px;
+    height: 358px;
+    background-color: #1E1E1E;
+    box-sizing: content-box;
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: all ease 0.2s;
+}
+
+.film:hover {
+    transform: scale(1);
+}
+
+.film img {
+    width: inherit;
+    height: 268px;
+}
+
+.filmDesc {
+    padding: 16px;
+}
+
+.filmBar {
+    display: flex;
+}
+
+.barItem1 {
+    width: 20px;
+    height: 4px;
+    border-radius: 10px;
+    background-color: #4A4A4A;
+}
+
+.barItem2 {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    margin-left: 3px;
+    background-color: #4A4A4A;
+}
+
+.filmTitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFF;
+    margin-top: 10px;
+}
+
+@media (max-width:414px) {
+    .film {
+        width: 321px;
+        height: 590px;
+        margin: auto;
+    }
+
+    .film img {
+        height: 442px;
+    }
+
+    .filmTitle {
+        font-size: 30px;
+        margin-top: 15px;
+    }
+
+    .barItem1 {
+        height: 8px;
+        width: 100px;
+    }
+
+    .barItem2 {
+        height: 8px;
+        width: 8px;
+    }
+}
