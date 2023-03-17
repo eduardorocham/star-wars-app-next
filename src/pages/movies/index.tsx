@@ -6,7 +6,7 @@ import styles from './Movies.module.css'
 
 //Components
 import { Layout } from '../../components/Layout'
-import { MovieComponent } from '../../components/MovieComponent'
+import { SingleMovie } from '../../components/SingleMovie'
 
 //Api
 import { api } from '../../services/api'
@@ -24,7 +24,7 @@ const Movies : NextPage<Props> = ({ moviesArray }) => {
             <div className={styles.films}>
                 <div className={styles.containerFilms}>
                     {moviesArray.map((movie, index)=>(
-                        <MovieComponent key={index} data={movie}/>
+                        <SingleMovie key={index} data={movie}/>
                     ))}
                 </div>
             </div>

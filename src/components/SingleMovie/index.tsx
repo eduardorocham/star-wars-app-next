@@ -11,7 +11,7 @@ type Props = {
     data: movie
 }
 
-export const MovieComponent = ({data}:Props) => {
+export const SingleMovie = ({data}:Props) => {
     const url = data.url;
     const filmId = url[url.length - 2];
 

@@ -23,7 +23,7 @@ export default function Home() {
       <SectionHome
         title='Know the main characters'
         desc='A guide to the main characteres of the franchise'
-        path='/characters'
+        path='/characters?page=1'
         textButton='Go to characters'
         bgImage={bgImage2}
       />

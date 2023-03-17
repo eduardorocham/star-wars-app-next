@@ -9,7 +9,7 @@ export const api = {
         const response = await axiosInstance.get(`/films/`);
         return response.data;
     },
-    getCharacteres: async (id:number) => {
+    getCharacteres: async (id: number) => {
         const response = await axiosInstance.get(`/people/?page=${id}`);
         return response.data;
     },
