@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { GetServerSidePropsContext, NextPage } from 'next'
-import { useRouter } from 'next/router'
 
 //Styles
 import styles from './Characters.module.css'
@@ -17,23 +16,11 @@ type PropsCharacters = {
 //Components
 import { Layout } from '../../components/Layout'
 import { Character } from '../../components/SingleCharacter'
+import { Pagination } from '../../components/Pagination'
 
 const Characters : NextPage<PropsCharacters> = ({characters}) => {
-    const router = useRouter();
-    const { page } = router.query;
-
     const [itemsPerPage] = useState(10);
     const pages = Math.ceil(87 / itemsPerPage);
-
-    
-    const updatePageQuery = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        if (page !== e.currentTarget.value) {
-            router.push({
-                pathname: '/characters',
-                query: { page: e.currentTarget.value }
-            })
-        }
-    }
 
     return (
         <Layout>
@@ -44,20 +31,10 @@ const Characters : NextPage<PropsCharacters> = ({characters}) => {
                     ))}
                 </div>
 
-                <div className={styles.pagination}>
-                    {Array.from(Array(pages), (item, index) => {
-                        return (
-                            <button
-                                value={index + 1}
-                                className={Number(page) === index + 1 ? styles.buttonPaginationActive : styles.buttonPagination}
-                                onClick={updatePageQuery}
-                                key={index}
-                            >
-                                {index + 1}
-                            </button>
-                        )
-                    })}
-                </div>
+                <Pagination 
+                    pages={pages}
+                    path="/characters"
+                />
             </div>
         </Layout>
     )

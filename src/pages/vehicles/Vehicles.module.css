@@ -1,0 +1,17 @@
+.vehicles {
+    background-color: #111;
+}
+
+.vehiclesContainer {
+    max-width: 948px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 15px;
+}
+
+@media (max-width:414px) {
+    .vehiclesContainer {
+        width: 338px;
+    }
+}

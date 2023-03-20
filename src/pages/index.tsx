@@ -30,7 +30,7 @@ export default function Home() {
       <SectionHome
         title='Know the main vehicles'
         desc='A guide to the main vehicles of the franchise'
-        path='/vehicles'
+        path='/vehicles?page=1'
         textButton='Go to vehicles'
         bgImage={bgImage3}
       />
