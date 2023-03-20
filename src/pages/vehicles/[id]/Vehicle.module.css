@@ -1,0 +1,87 @@
+.vehiclePage {
+    height: 49vh;
+    padding: 55px;
+    display: flex;
+    align-items: center;
+    background-color: #1E1E1E;
+}
+
+
+.vehiclePageImg {
+    width: 33.8rem;
+    height: 30rem;
+    transform: scale(0.8);
+}
+
+.vehiclePageImg img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+
+.vehiclePageName {
+    color: #FFF;
+    font-size: 2.5rem;
+}
+
+.vehiclePageBar {
+    width: 5rem;
+    height: 0.1rem;
+    background-color: #DFCC1D;
+    margin-top: 0.5rem;
+}
+
+.vehiclePageData {
+    margin-left: 3rem;
+}
+
+.vehiclePageInfos {
+    color: #FFF;
+    min-width: 40rem;
+    min-height: 7.5rem;
+    text-align: left;
+    border: 1px solid #DFCC1D;
+    padding: 1rem 0 1rem 1rem;
+    display: flex;
+    margin-top: 1.2rem;
+}
+
+.vehiclePageInfosRight, .vehiclePageInfosLeft {
+    flex: 1;
+}
+
+.vehiclePageInfo {
+    font-size: 1.4rem;
+}
+
+.vehiclePageInfo span {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 414px) {
+    .vehiclePage {
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+
+    .vehiclePageData {
+        margin-left: 0;
+    }
+
+    .vehiclePageInfos {
+        min-width: 30rem;
+        margin-top: 2rem;
+        flex-direction: column;
+    }
+
+    .vehiclePageInfo {
+        margin: 0.5rem;
+        font-size: 1.8rem;
+    }
+
+    .vehiclePageInfo span {
+        font-size: 1.8rem;
+    }
+}

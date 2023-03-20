@@ -12,10 +12,10 @@ import { SingleMovie } from '../../components/SingleMovie'
 import { api } from '../../services/api'
 
 //Types
-import { movie } from '../../types/movie'
+import { Movie } from '../../types/movie'
 
 type Props = {
-    moviesArray: movie[]
+    moviesArray: Movie[]
 }
 
 const Movies : NextPage<Props> = ({ moviesArray }) => {

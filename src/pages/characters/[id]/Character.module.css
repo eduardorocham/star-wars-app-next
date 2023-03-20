@@ -1,0 +1,94 @@
+.characterPage {
+    padding: 55px;
+    display: flex;
+    height: 49vh;;
+    align-items: center;
+    background-color: #1E1E1E;
+}
+
+.characterPageImg {
+    width: 17.8rem;
+    height: 20.7rem;
+}
+
+.characterPageImg img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+
+.characterPageName {
+    color: #FFF;
+    font-size: 2.5rem;
+}
+
+.characterPageBar {
+    width: 5rem;
+    height: 0.1rem;
+    background-color: #DFCC1D;
+    margin-top: 0.5rem;
+}
+
+.characterPageData {
+    margin-left: 3rem;
+}
+
+.characterPageInfos {
+    color: #FFF;
+    min-width: 40rem;
+    min-height: 7.5rem;
+    text-align: left;
+    border: 1px solid #DFCC1D;
+    padding: 1rem 0 1rem 1rem;
+    display: flex;
+    margin-top: 1.2rem;
+}
+
+.characterPageInfosRight, .characterPageInfosLeft {
+    flex: 1;
+}
+
+.characterPageInfo {
+    font-size: 1.4rem;
+}
+
+.characterPageInfo span {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+@media(max-width: 414px) {
+    .characterPage {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .characterPageImg {
+        width: 19.5rem;
+        height: 26.8rem;
+    }
+
+    .characterPageData {
+        margin-left: 0;
+    }
+
+    .characterPageName {
+        margin-top: 2rem;
+    }
+
+    .characterPageInfos {
+        flex-direction: column;
+        min-width: 30rem;
+        margin-top: 2rem;
+    }
+
+    .characterPageInfo {
+        margin: 0.5rem;
+        font-size: 1.8rem;
+    }
+
+    .characterPageInfo span {
+        font-size: 1.8rem;
+    }
+}

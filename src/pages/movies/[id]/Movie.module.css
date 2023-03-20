@@ -1,0 +1,84 @@
+.moviePage {
+    height: 49vh;
+    padding: 55px;
+    display: flex;
+    align-items: center;
+    background-color: #1E1E1E;
+}
+
+.movieImg {
+    width: 17.8rem;
+    height: 20.7rem;
+}
+
+.movieImg img {
+    object-fit: cover;
+    width: inherit;
+    height: inherit;
+}
+
+.moviePageTitle {
+    color: #FFF;
+    font-size: 2.5rem;
+}
+
+.moviePageBar {
+    width: 5rem;
+    height: 0.1rem;
+    background-color: #DFCC1D;
+    margin-top: 0.5rem;
+}
+
+.moviePageDesc {
+    color: #FFF;
+    font-size: 1.4rem;
+    margin: 1.2rem 0 1.6rem;
+    text-align: justify;
+}
+
+.movieData {
+    margin-left: 3rem;
+}
+
+.infos {
+    color: #FFF;
+    max-width: 26.1rem;
+    min-height: 7.5rem;
+    text-align: left;
+    border: 1px solid #DFCC1D;
+    padding: 1rem 0 1rem 1rem;
+}
+
+.moviePageInfo {
+    font-size: 1.4rem;
+}
+
+.moviePageInfo span {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+@media (max-width:414px) {
+    .moviePage {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .movieImg {
+        width: 25.6rem;
+        height: 35.3rem;
+    }
+
+    .moviePageTitle {
+        margin-top: 2rem;
+    }
+
+    .movieData {
+        margin-left: 0;
+    }
+
+    .infos {
+        max-width: 30.4rem;
+    }
+}
