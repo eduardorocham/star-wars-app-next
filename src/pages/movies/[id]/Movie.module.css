@@ -59,6 +59,13 @@
     margin-right: 0.5rem;
 }
 
+.charactersMovie {
+    background-color: #1E1E1E;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5.5rem 5.5rem 5.5rem ;
+}
+
 @media (max-width:414px) {
     .moviePage {
         flex-direction: column;

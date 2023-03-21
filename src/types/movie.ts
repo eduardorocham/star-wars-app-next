@@ -7,7 +7,7 @@ export type Movie = {
     director: string, 
     producer: string, 
     release_date: string, 
-    characters: Character[], 
+    characters: string[], 
     planets: [], 
     starships: [], 
     vehicles: [], 

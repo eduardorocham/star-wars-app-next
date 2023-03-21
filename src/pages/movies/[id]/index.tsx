@@ -1,23 +1,30 @@
 //Next
 import { GetServerSidePropsContext, NextPage } from 'next'
 import { useRouter } from 'next/router'
+import { useState, useEffect } from 'react';
 
 //Styles
 import styles from './Movie.module.css'
 
 //Components
 import { Layout } from '../../../components/Layout'
+import { CharactersCicle } from '../../../components/PersonCircle'
 
 //api
 import { api } from '../../../services/api'
 
 //Types
 import { Movie } from '../../../types/movie'
+import { Character } from '../../../types/character'
 type PropsMovie = {
-    movie: Movie
+    movie: Movie,
+    charactersMovieList: Character[]
 }
 
-const Movie : NextPage<PropsMovie> = ({ movie }) => {
+const Movie : NextPage<PropsMovie> = ({
+    movie,
+    charactersMovieList
+}) => {
     const router = useRouter();
     const { id } = router.query;
 
@@ -47,6 +54,11 @@ const Movie : NextPage<PropsMovie> = ({ movie }) => {
                         </div>
                     </div>
             </div>
+            <div className={styles.charactersMovie}>
+                {charactersMovieList.map((i, k) => (
+                    <CharactersCicle data={i} key={k} />
+                ))}
+            </div>
         </Layout>
     )
 }
@@ -58,9 +70,21 @@ export const getServerSideProps = async (context : GetServerSidePropsContext) =>
 
     const movie = await api.getFilm(id);
 
+    let charactersMovieList : Character[] = [];
+    for (let url of movie.characters) {
+        try {
+            const result = await fetch(url);
+            const json = await result.json();
+            charactersMovieList.push(json);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
     return {
         props: {
-            movie
+            movie,
+            charactersMovieList
         }
     }
 }
