@@ -1,6 +1,6 @@
 .moviePage {
     height: 49vh;
-    padding: 55px;
+    padding: 5.5rem 5.5rem 0 5.5rem;
     display: flex;
     align-items: center;
     background-color: #1E1E1E;
@@ -61,9 +61,12 @@
 
 .charactersMovie {
     background-color: #1E1E1E;
+    padding: 0 5.5rem 5.5rem 5.5rem ;
+}
+
+.charactersMovieItems {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 5.5rem 5.5rem 5.5rem ;
 }
 
 @media (max-width:414px) {

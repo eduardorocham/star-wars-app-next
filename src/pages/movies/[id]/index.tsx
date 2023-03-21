@@ -55,9 +55,12 @@ const Movie : NextPage<PropsMovie> = ({
                     </div>
             </div>
             <div className={styles.charactersMovie}>
-                {charactersMovieList.map((i, k) => (
-                    <CharactersCicle data={i} key={k} />
-                ))}
+                <div className={styles.moviePageTitle} style={{marginBottom: 20}}>Characters</div>
+                <div className={styles.charactersMovieItems}>
+                    {charactersMovieList.map((i, k) => (
+                        <CharactersCicle data={i} key={k} />
+                    ))}
+                </div>
             </div>
         </Layout>
     )

@@ -1,5 +1,5 @@
 .characterPage {
-    padding: 55px;
+    padding: 5.5rem 5.5rem 0 5.5rem;
     display: flex;
     height: 49vh;;
     align-items: center;
@@ -56,6 +56,24 @@
     font-size: 1.4rem;
     font-weight: bold;
     margin-right: 0.5rem;
+}
+
+
+.characterMovies {
+    background-color: #1E1E1E;
+    padding: 0 5.5rem 5.5rem 5.5rem ;
+}
+
+.characterMovies h2 {
+    margin-bottom: 1.5rem;
+    color: #FFF;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.characterMoviesItems {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 @media(max-width: 414px) {
