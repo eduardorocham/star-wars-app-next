@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { GetServerSidePropsContext, NextPage } from 'next'
+import { useRouter } from 'next/router'
 
 //Styles
 import styles from './Characters.module.css'
@@ -21,6 +22,9 @@ import { Pagination } from '../../components/Pagination'
 const Characters : NextPage<PropsCharacters> = ({characters}) => {
     const [itemsPerPage] = useState(10);
     const pages = Math.ceil(87 / itemsPerPage);
+
+    const router = useRouter()
+    console.log(router.pathname)
 
     return (
         <Layout>

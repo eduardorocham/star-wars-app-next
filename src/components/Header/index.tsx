@@ -1,6 +1,7 @@
 //Next
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 //Styles
 import styles from './Header.module.css'
@@ -12,6 +13,8 @@ import menuMobile from '../../../public/images/menu_mobile.png'
 import { navigationLinks } from '@/utils/navigationLinks'
 
 export const Header = () => {
+    const router = useRouter()
+
     return (
         <header className={styles.headerArea}>
             <div className={styles.menuMobile}>
@@ -26,9 +29,12 @@ export const Header = () => {
                 {navigationLinks.map((link, index) => (
                     <li 
                         key={index} 
-                        className={styles.linkItem}
+                        className={[
+                            styles.linkItem,
+                            link.path.includes(router.pathname) ? styles.linkActive : null
+                        ].join(' ')}
                     >
-                        <Link href={link.path[0]}>
+                        <Link href={link.href}>
                             {link.label}
                         </Link>
                     </li>
